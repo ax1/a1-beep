@@ -1,0 +1,28 @@
+{
+  "name": "a1-beep",
+  "version": "1.0.0",
+  "description": "Make the computer to play a beep sound",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ax1@github.com/ax1/a1-beep.git"
+  },
+  "keywords": [
+    "beep",
+    "alert",
+    "sound",
+    "horn"
+  ],
+  "author": "ax1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ax1/a1-beep/issues"
+  },
+  "homepage": "https://github.com/ax1/a1-beep#readme",
+  "dependencies": {
+    "a1-util": "^1.0.3"
+  }
+}
