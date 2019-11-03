@@ -1,8 +1,8 @@
 module.exports = { beep }
 
-const { execute } = require('a1-util')
+const { execute, sleep } = require('a1-util')
 
-const COMMAND = 'play -q -n synth 0.5 trapezium C5' // see `man play`. type is one of sine, square, triangle, sawtooth, trapezium, exp, [white]noise, tpdfnoise pinknoise, brownnoise, pluck; default=sine.
+const COMMAND = 'play -q -n synth 0.15 trapezium C5' // see `man play`. type is one of sine, square, triangle, sawtooth, trapezium, exp, [white]noise, tpdfnoise pinknoise, brownnoise, pluck; default=sine.
 
 /**
  * Make a beep,
@@ -12,7 +12,19 @@ const COMMAND = 'play -q -n synth 0.5 trapezium C5' // see `man play`. type is o
  * This way, the function will never raise problems on runtime. 
  * 
  * Note: the `play` command must be installed
+ * @param beep?{string} optional, whitespace means silence. Example '. . ...' or 'a a a bbb' 
  */
-function beep() {
-  execute(COMMAND).catch(err => console.log(err))
+function beep(song = '.') {
+  const fn = async song => {
+    try {
+      await sleep(100)
+      for (let c of song.split('')) {
+        if (c !== ' ') {
+          await execute(COMMAND)
+          await sleep(100)
+        } else await sleep(200)
+      }
+    } catch (err) { console.log(err) }
+  }
+  fn(song).catch(err => { })
 }

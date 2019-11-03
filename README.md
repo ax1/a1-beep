@@ -13,6 +13,17 @@ Pre-requisite: Make sure that the `play` command is installed. (Note, a list of 
 Then, simply write:
 
 ```javascript
-require('a1-beep').beep()
+const {beep}=require('a1-beep')
+beep() //normal beep
 ```
+
+Complex beeps, like songs, can also be played. Whitespace means 200ms of silence
+```javascript
+const {beep}=require('a1-beep')
+beep('. . ... .... ..')
+```
+
+Notes:
+
+beep() returns inmediately (and not async function) because there is no need for waiting beep to finish (side action).
 
