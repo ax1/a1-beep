@@ -4,13 +4,13 @@ const { sleep } = require('a1-util')
 async function test() {
   // test normal beep
   beep()
-  await sleep(1000)
+  await sleep(2000)
   // test songs 
   beep('. ... .  . .') //roger rabbit
   await sleep(5000)
   beep('. . ... .... ..') // stadium
   await sleep(6000)
-  beep('. ... . .. .. ..') // star wars
+  beep('. . .  . .. . ..') // star wars
 }
 
-test().catch(err => console.error(err))
+test().catch(console.error)
