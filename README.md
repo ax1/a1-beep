@@ -8,18 +8,17 @@ Beep is usually a `\u07` character printed to console. Unfortunately, on modern 
 
 ## Usage
 
-Pre-requisite: Make sure that the `play` command is installed. (Note, a list of other common players will be added in the future).
+Pre-requisite: Make sure that the `aplay` command is installed(aplay is installed by default in Ubuntu and other distros).
 
 Then, simply write:
 
 ```javascript
-const {beep}=require('a1-beep')
+const { beep } = require('a1-beep')
 beep() //normal beep
 ```
 
 Complex beeps, like songs, can also be played. Whitespace means 200ms of silence
 ```javascript
-const {beep}=require('a1-beep')
 beep('. . ... .... ..')
 ```
 

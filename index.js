@@ -2,7 +2,7 @@ module.exports = { beep }
 
 const { execute, sleep } = require('a1-util')
 
-const COMMAND = 'play -q -n synth 0.15 trapezium C5' // see `man play`. type is one of sine, square, triangle, sawtooth, trapezium, exp, [white]noise, tpdfnoise pinknoise, brownnoise, pluck; default=sine.
+const COMMAND = 'aplay beep.wav'
 
 /**
  * Make a beep,
@@ -20,7 +20,7 @@ function beep(song = '.') {
       await sleep(100)
       for (let c of song.split('')) {
         if (c !== ' ') {
-          await execute(COMMAND)
+          try { await execute(COMMAND) } catch (err) { ; }
           await sleep(100)
         } else await sleep(200)
       }
