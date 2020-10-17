@@ -8,7 +8,7 @@ Beep is usually a `\u07` character printed to console. Unfortunately, on modern 
 
 ## Usage
 
-Pre-requisite: Make sure that the `aplay` command is installed(aplay is installed by default in Ubuntu and other distros).
+Pre-requisite: Make sure that the `aplay` command is installed (aplay is already installed by default in Ubuntu and other distros).
 
 Then, simply write:
 
@@ -24,5 +24,5 @@ beep('. . ... .... ..')
 
 Notes:
 
-beep() returns inmediately (and not async function) because there is no need for waiting beep to finish (side action).
+beep() returns inmediately (and not async function) because there is no need for waiting beep to finish.
 
