@@ -2,7 +2,7 @@ module.exports = { beep }
 
 const { execute, sleep } = require('a1-util')
 
-const COMMAND = 'aplay beep.wav'
+const COMMAND = `aplay ${__dirname}/beep.wav`
 
 /**
  * Make a beep,
