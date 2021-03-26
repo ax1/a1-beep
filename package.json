@@ -1,6 +1,6 @@
 {
   "name": "a1-beep",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Make the computer to play a beep sound",
   "main": "index.js",
   "scripts": {
