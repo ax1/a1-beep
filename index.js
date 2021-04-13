@@ -20,7 +20,7 @@ function beep(song = '.') {
       await sleep(100)
       for (let c of song.split('')) {
         if (c !== ' ') {
-          try { await execute(COMMAND) } catch (err) { ; }
+          try { await execute(COMMAND) } catch (err) { console.error(err) }
           await sleep(100)
         } else await sleep(200)
       }
