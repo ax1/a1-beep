@@ -1,7 +1,7 @@
-const { beep } = require('../index')
+import { beep } from '../index.js'
+import { sleep } from 'a1-util'
 
 async function test() {
-  const { sleep } = await import('a1-util')
   // test normal beep
   beep()
   await sleep(2000)

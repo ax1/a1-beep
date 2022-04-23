@@ -1,5 +1,7 @@
 # a1-beep
 
+> Upgrading to V2: the package is a dual cjs-esm so no update should be required.
+
 Play a beep sound on the computer.
 
 ## Why

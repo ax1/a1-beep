@@ -24,5 +24,12 @@
   "homepage": "https://github.com/ax1/a1-beep#readme",
   "dependencies": {
     "a1-util": "^2.0.0"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    }
   }
 }

@@ -16,6 +16,7 @@ const COMMAND = `aplay -q ${__dirname}/beep.wav`
 export function beep(song = '.') {
   const fn = async song => {
     try {
+
       await sleep(100)
       for (let c of song.split('')) {
         if (c !== ' ') {
