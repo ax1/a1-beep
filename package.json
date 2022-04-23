@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/ax1/a1-beep#readme",
   "dependencies": {
-    "a1-util": "^1.0.3"
+    "a1-util": "^2.0.0"
   }
 }

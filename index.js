@@ -1,8 +1,6 @@
 module.exports = { beep }
 
-const { execute, sleep } = require('a1-util')
-
-const COMMAND = `aplay ${__dirname}/beep.wav`
+const COMMAND = `aplay -q ${__dirname}/beep.wav`
 
 /**
  * Make a beep,
@@ -17,6 +15,7 @@ const COMMAND = `aplay ${__dirname}/beep.wav`
 function beep(song = '.') {
   const fn = async song => {
     try {
+      const { execute, sleep } = await import('a1-util')
       await sleep(100)
       for (let c of song.split('')) {
         if (c !== ' ') {
