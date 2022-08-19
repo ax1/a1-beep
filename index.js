@@ -1,8 +1,10 @@
 import { execute, sleep } from 'a1-util'
-import * as url from 'url';
+import { fileURLToPath, URL } from 'url'
 
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+let __dirname = fileURLToPath(new URL('.', import.meta.url))
+if (__dirname.endsWith('.js')) __dirname = __dirname.substring(0, __dirname.lastIndexOf('/') + 1)
 const COMMAND = `aplay -q ${__dirname}/beep.wav`
+
 /**
  * Make a beep,
  * The function is not async to be faster (detach the beep ASAP),
